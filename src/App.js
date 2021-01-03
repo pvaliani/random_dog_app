@@ -21,7 +21,6 @@ function App() {
 
     })
 
-    
 
 
   };
@@ -34,12 +33,22 @@ function App() {
   }, []);
 
 
+  const handleDog = () => {
+    setDogs(fetchDogs);
+    
+  }
+
+  // We need this statement to say if there are no dogs initially then return null otherwise will receive an error after the first fetch 
+
   if(!dogs) return null;
+
+  // dogs.message is assigned to the dog prop on the left and contains the url from the object 
 
   return (
    <>
       <h1>Random Woofer Generator: Here's yer dug</h1>
       <Dog dog={dogs.message} />
+      <button onClick={handleDog}> Another Dug </button>
    
    </>
   );
