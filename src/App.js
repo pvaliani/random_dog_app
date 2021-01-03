@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Dog from './components/Dog';
 import './App.css';
 
 function App() {
@@ -27,14 +28,18 @@ function App() {
 
 
   // The useEffect is actually performing the fetchDogs method and returning it to the state of dogs
-  
+
   useEffect(() => {
     fetchDogs();
   }, []);
 
 
   return (
-   "hi"
+   <>
+      <h1>Here's yer dug</h1>
+      <Dog />
+   
+   </>
   );
 }
 
