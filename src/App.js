@@ -21,8 +21,6 @@ function App() {
 
     })
 
-
-
   };
 
 
@@ -32,6 +30,7 @@ function App() {
     fetchDogs();
   }, []);
 
+  // handleDog will invoke setDogs to run the fetch again an retrieve a new dog - the state will change and the page wil refresh
 
   const handleDog = () => {
     setDogs(fetchDogs);
@@ -42,7 +41,7 @@ function App() {
 
   if(!dogs) return null;
 
-  // dogs.message is assigned to the dog prop on the left and contains the url from the object 
+  // dogs.message is assigned to the dog prop on the left and contains the url from the object. On clicking of the button, handleDog is invoked and another dog is shown on screen
 
   return (
    <>
