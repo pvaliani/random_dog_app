@@ -34,10 +34,12 @@ function App() {
   }, []);
 
 
+  if(!dogs) return null;
+
   return (
    <>
-      <h1>Here's yer dug</h1>
-      <Dog />
+      <h1>Random Woofer Generator: Here's yer dug</h1>
+      <Dog dog={dogs.message} />
    
    </>
   );
